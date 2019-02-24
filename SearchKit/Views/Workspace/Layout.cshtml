@@ -7,8 +7,12 @@ Copyright (c) 2018 Anton Hirov *@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>@ViewBag.Title</title>
+    @Styles.Render("~/bundles/css")
 </head>
 <body>
-    @RenderBody()
+    <div class="container">
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/js")
 </body>
 </html>

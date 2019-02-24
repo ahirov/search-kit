@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchKit", "SearchKit\Sear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchKit.Tests", "SearchKit.Tests\SearchKit.Tests.csproj", "{93FF93D2-693E-4BDB-8CEE-98B93B695580}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchKit.Core", "SearchKit.Core\SearchKit.Core.csproj", "{F9683E20-5E26-4103-B642-757FFD86E424}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{93FF93D2-693E-4BDB-8CEE-98B93B695580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93FF93D2-693E-4BDB-8CEE-98B93B695580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93FF93D2-693E-4BDB-8CEE-98B93B695580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9683E20-5E26-4103-B642-757FFD86E424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9683E20-5E26-4103-B642-757FFD86E424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9683E20-5E26-4103-B642-757FFD86E424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9683E20-5E26-4103-B642-757FFD86E424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
