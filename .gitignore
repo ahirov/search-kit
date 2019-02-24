@@ -1,0 +1,16 @@
+# User-specific files
+*.DotSettings
+*.user
+
+# Build results
+bin/
+obj/
+
+# Dependencies
+packages/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Publish profiles
+PublishProfiles/
