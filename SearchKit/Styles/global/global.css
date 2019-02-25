@@ -1,0 +1,21 @@
+﻿/* SearchKit (https://github.com/hirov-anton/search-kit)
+See LICENSE file in the solution root for full license information
+Copyright (c) 2018 Anton Hirov */
+
+p {
+    /* display */
+    margin: 0;
+}
+
+.sk-content {
+    /* display */
+    margin-top: 32px;
+}
+
+div.sk-hr {
+    /* display */
+    background-image: url("../../Graphics/1.0/hr-block.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+    height: 8px;
+}

@@ -1,0 +1,17 @@
+﻿/* SearchKit (https://github.com/hirov-anton/search-kit)
+See LICENSE file in the solution root for full license information
+Copyright (c) 2018 Anton Hirov */
+
+#sk-search-sections    > p,
+#sk-search-subsections > p,
+#sk-search-items       > p {
+    /* text */
+    text-align: right;
+    font-weight: bold;
+}
+
+.sk-search-panel {
+    /* display */
+    margin-top: 15px;
+    margin-bottom: 20px;
+}

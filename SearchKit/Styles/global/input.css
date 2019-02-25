@@ -1,0 +1,23 @@
+﻿/* SearchKit (https://github.com/hirov-anton/search-kit)
+See LICENSE file in the solution root for full license information
+Copyright (c) 2018 Anton Hirov */
+
+input.form-control {
+    /* border */
+    border-color: #212529;
+}
+
+input.form-control:focus {
+    /* display */
+    box-shadow: none;
+
+    /* border */
+    border-color: #212529;
+}
+
+.input-group-text {
+    /* color */
+    color: #212529;
+    border-color: #212529;
+    background-color: transparent;
+}
