@@ -7,6 +7,22 @@ p {
     margin: 0;
 }
 
+a {
+    /* color */
+    color: #212529;
+}
+
+a:hover {
+    /* color */
+    color: var(--success);
+}
+
+a:active,
+a:focus {
+    /* color */
+    color: var(--danger);
+}
+
 .sk-content {
     /* display */
     margin-top: 32px;
