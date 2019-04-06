@@ -10,7 +10,7 @@ $(document).ready(function() {
             //securityToken: TODO!!!
         },
         success: function (result) {
-            var sections = JSON.parse(result.data);
+            var sections = parseSections(result.data);
         }
         //error: TODO!!!
     });

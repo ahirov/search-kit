@@ -13,7 +13,6 @@ namespace SearchKit.Entities.Seed
     {
         private int id;
         private int dataCount;
-        private int sectionsDepth;
 
         private Random random;
         private List<string> papers;
@@ -24,11 +23,11 @@ namespace SearchKit.Entities.Seed
         public SectionOverview Init()
         {
             InitData();
-            var section = CreateSection(null, "Root");
-            return section;
+            const int sectionsDepth = 3;
+            return CreateSection(null, sectionsDepth, "Root");
         }
 
-        private SectionOverview CreateSection(SectionOverview parent, string name = null)
+        private SectionOverview CreateSection(SectionOverview parent, int depth, string name = null)
         {
             var section = new SectionOverview
             {
@@ -38,11 +37,11 @@ namespace SearchKit.Entities.Seed
                 Author = CreateAuthor(),
                 Parent = parent
             };
-            if (sectionsDepth > 0)
+            if (depth > 0)
             {
-                sectionsDepth--;
+                depth--;
                 section.Children.AddRange(Enumerable.Range(0, RandomCount)
-                                                    .Select(_ => CreateSection(section)));
+                                                    .Select(_ => CreateSection(section, depth)));
                 section.Papers.AddRange(Enumerable.Range(0, RandomCount)
                                                   .Select(_ => CreatePaper()));
             }
@@ -81,7 +80,6 @@ namespace SearchKit.Entities.Seed
         private void InitData()
         {
             dataCount = 4;
-            sectionsDepth = 3;
             random = new Random();
             papers = new List<string>
             {

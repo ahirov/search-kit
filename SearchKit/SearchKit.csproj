@@ -103,7 +103,8 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Graphics\1.0\hr-block.svg" />
-    <Content Include="Scripts\search\events\content-onload-events.js" />
+    <Content Include="Scripts\global\global-constants.js" />
+    <Content Include="Scripts\search\events\search-onload-events.js" />
     <Content Include="Scripts\dependencies\bootstrap-4.1.1\bootstrap.js" />
     <Content Include="Scripts\dependencies\bootstrap-4.1.1\bootstrap.min.js" />
     <Content Include="Scripts\dependencies\bootstrap-datepicker-1.7.1\bootstrap-datepicker.js" />
@@ -116,6 +117,7 @@
     <Content Include="Scripts\dependencies\jquery-3.2.1\jquery.js" />
     <Content Include="Scripts\dependencies\jquery-3.2.1\jquery.min.js" />
     <Content Include="Scripts\global\global-url.js" />
+    <Content Include="Scripts\search\handlers\search-sections-parser.js" />
     <Content Include="Styles\dependencies\bootstrap-4.1.1\bootstrap.css" />
     <Content Include="Styles\dependencies\bootstrap-4.1.1\bootstrap.min.css" />
     <Content Include="Styles\dependencies\bootstrap-datepicker-1.7.1\bootstrap-datepicker.css" />
