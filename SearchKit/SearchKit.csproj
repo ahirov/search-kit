@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SearchKit</RootNamespace>
     <AssemblyName>SearchKit</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -24,6 +24,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,14 +55,13 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -84,13 +84,13 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
@@ -103,6 +103,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Graphics\1.0\hr-block.svg" />
+    <Content Include="Scripts\search\events\content-onload-events.js" />
     <Content Include="Scripts\dependencies\bootstrap-4.1.1\bootstrap.js" />
     <Content Include="Scripts\dependencies\bootstrap-4.1.1\bootstrap.min.js" />
     <Content Include="Scripts\dependencies\bootstrap-datepicker-1.7.1\bootstrap-datepicker.js" />
@@ -114,6 +115,7 @@
     <Content Include="Scripts\dependencies\fontawesome-5.1.0\fontawesome.js" />
     <Content Include="Scripts\dependencies\jquery-3.2.1\jquery.js" />
     <Content Include="Scripts\dependencies\jquery-3.2.1\jquery.min.js" />
+    <Content Include="Scripts\global\global-url.js" />
     <Content Include="Styles\dependencies\bootstrap-4.1.1\bootstrap.css" />
     <Content Include="Styles\dependencies\bootstrap-4.1.1\bootstrap.min.css" />
     <Content Include="Styles\dependencies\bootstrap-datepicker-1.7.1\bootstrap-datepicker.css" />
@@ -129,9 +131,15 @@
     <Compile Include="Config\BundleConfig.cs" />
     <Compile Include="Config\RouteConfig.cs" />
     <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Entities\ReferenceConverter.cs" />
+    <Compile Include="Entities\Seed\DataInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Search\AuthorOverview.cs" />
+    <Compile Include="Entities\JsonReference.cs" />
+    <Compile Include="Entities\Search\PaperOverview.cs" />
+    <Compile Include="Entities\Search\SectionOverview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +163,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SearchKit.Core\SearchKit.Core.csproj">
       <Project>{F9683E20-5E26-4103-B642-757FFD86E424}</Project>

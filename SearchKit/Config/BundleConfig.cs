@@ -18,11 +18,13 @@ namespace SearchKit
 
             var cssPattern = CodeConstants.CssLiteral.GetSearchPattern();
             css.IncludeDirectory("~/Styles/dependencies/", cssPattern, true);
-            css.IncludeDirectory("~/Styles/global/", cssPattern, true);
-            css.IncludeDirectory("~/Styles/search/", cssPattern, true);
+            css.IncludeDirectory("~/Styles/global/",       cssPattern, true);
+            css.IncludeDirectory("~/Styles/search/",       cssPattern, true);
 
             var jsPattern = CodeConstants.JsLiteral.GetSearchPattern();
             js.IncludeDirectory("~/Scripts/dependencies/", jsPattern, true);
+            js.IncludeDirectory("~/Scripts/global/",       jsPattern, true);
+            js.IncludeDirectory("~/Scripts/search/",       jsPattern, true);
         }
     }
 }
