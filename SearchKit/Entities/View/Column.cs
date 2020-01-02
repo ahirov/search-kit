@@ -1,0 +1,26 @@
+﻿// SearchKit (https://github.com/hirov-anton/search-kit)
+// See LICENSE file in the solution root for full license information
+// Copyright (c) 2018 Anton Hirov
+
+using System.Collections.Generic;
+
+namespace SearchKit.Entities.View
+{
+    public enum ColumnType
+    {
+        None = 0,
+        InitialSection = 1,
+        IntermediateSection = 2,
+        FinalSection = 3,
+        Items = 4
+    }
+
+    public class Column
+    {
+        public string Name { get; set; }
+        public int Width { get; set; }
+        public ColumnType Type { get; set; }
+    }
+
+    public class ColumnCollection : List<Column> { }
+}

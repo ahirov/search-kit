@@ -2,6 +2,8 @@
 See LICENSE file in the solution root for full license information
 Copyright (c) 2018 Anton Hirov *@
 
+@using SearchKit.Entities.View
+@model ColumnCollection
 @{
     ViewBag.Title = "Search";
 }
@@ -22,24 +24,26 @@ Copyright (c) 2018 Anton Hirov *@
         </div>
     </div>
     <div class="row">
-        <div id="sk-search-sections" class="col-md-3">
-            <div class="d-flex">
-                <a href="#" class="mr-auto">
-                    <i class="fas fa-external-link-alt fa-xs"
-                       data-fa-transform="flip-h"></i>
-                </a>
-                <p>Sections:</p>
+        @foreach (var item in Model)
+        {
+            <div class="col-md-@item.Width">
+                @if (item.Type == ColumnType.InitialSection)
+                {
+                    <div class="d-flex">
+                        <a href="#" class="mr-auto">
+                            <i class="fas fa-external-link-alt fa-xs"
+                               data-fa-transform="flip-h"></i>
+                        </a>
+                        <p class="sk-search-name">@item.Name:</p>
+                    </div>
+                }
+                else
+                {
+                    <p class="sk-search-name">@item.Name:</p>
+                }
+                <div class="sk-hr"></div>
             </div>
-            <div class="sk-hr"></div>
-        </div>
-        <div id="sk-search-subsections" class="col-md-3">
-            <p>Subsections:</p>
-            <div class="sk-hr"></div>
-        </div>
-        <div id="sk-search-items" class="col-md-6">
-            <p>Items:</p>
-            <div class="sk-hr"></div>
-        </div>
+        }
     </div>
 </div>
 

@@ -132,7 +132,9 @@
   <ItemGroup>
     <Compile Include="Config\BundleConfig.cs" />
     <Compile Include="Config\RouteConfig.cs" />
+    <Compile Include="Config\ViewConfig.cs" />
     <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Entities\View\Column.cs" />
     <Compile Include="Entities\ReferenceConverter.cs" />
     <Compile Include="Entities\Seed\DataInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -185,9 +187,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61933</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61933/</IISUrl>
+          <IISUrl>http://localhost:50587/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -16,6 +16,7 @@ namespace SearchKit
             AreaRegistration.RegisterAllAreas();
             RouteConfig.Register(RouteTable.Routes);
             BundleConfig.Register(BundleTable.Bundles);
+            ViewConfig.Register(ColumnTable.Columns);
         }
     }
 }

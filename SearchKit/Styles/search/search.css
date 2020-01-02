@@ -2,9 +2,7 @@
 See LICENSE file in the solution root for full license information
 Copyright (c) 2018 Anton Hirov */
 
-#sk-search-sections > div > p,
-#sk-search-subsections > p,
-#sk-search-items       > p {
+.sk-search-name {
     /* text */
     text-align: right;
     font-weight: bold;

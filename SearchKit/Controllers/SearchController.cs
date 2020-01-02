@@ -13,7 +13,7 @@ namespace SearchKit.Controllers
         // GET: /Search
         public ActionResult Index()
         {
-            return View();
+            return View(ColumnTable.Columns);
         }
 
         //
