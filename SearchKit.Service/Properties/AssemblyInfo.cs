@@ -3,17 +3,18 @@
 // Copyright (c) Anton Hirov
 
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SearchKit.Core")]
+[assembly: AssemblyTitle("SearchKit.Service")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SearchKit.Core")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyProduct("SearchKit.Service")]
+[assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -23,7 +24,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f9683e20-5e26-4103-b642-757ffd86e424")]
+[assembly: Guid("f309a2ae-4a66-46f1-80e2-811dab8ec11e")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,6 +1,6 @@
 ﻿// SearchKit (https://github.com/hirov-anton/search-kit)
 // See LICENSE file in the solution root for full license information
-// Copyright (c) 2018 Anton Hirov
+// Copyright (c) Anton Hirov
 
 using System;
 using System.Collections.Generic;
@@ -34,9 +34,9 @@ namespace SearchKit
         {
             columns.AddRange(new ColumnCollection
             {
-                new Column {Name = "Sections",    Width = 3, Type = ColumnType.InitialSection},
-                new Column {Name = "Subsections", Width = 3, Type = ColumnType.FinalSection},
-                new Column {Name = "Items",       Width = 6, Type = ColumnType.Items}
+                new Column {Id = "sections",    Name = "Sections",    Width = 3, Type = ColumnType.InitialSection},
+                new Column {Id = "subsections", Name = "Subsections", Width = 3, Type = ColumnType.FinalSection},
+                new Column {Id = "items",       Name = "Items",       Width = 6, Type = ColumnType.Items}
             });
         }
 

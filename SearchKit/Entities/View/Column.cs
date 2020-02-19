@@ -1,6 +1,6 @@
 ﻿// SearchKit (https://github.com/hirov-anton/search-kit)
 // See LICENSE file in the solution root for full license information
-// Copyright (c) 2018 Anton Hirov
+// Copyright (c) Anton Hirov
 
 using System.Collections.Generic;
 
@@ -17,6 +17,7 @@ namespace SearchKit.Entities.View
 
     public class Column
     {
+        public string Id { get; set; }
         public string Name { get; set; }
         public int Width { get; set; }
         public ColumnType Type { get; set; }

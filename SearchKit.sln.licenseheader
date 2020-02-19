@@ -2,19 +2,19 @@ extensions: designer.cs generated.cs
 extensions: .cs .scss
 // SearchKit (https://github.com/hirov-anton/search-kit)
 // See LICENSE file in the solution root for full license information
-// Copyright (c) 2018 Anton Hirov
+// Copyright (c) Anton Hirov
 
 extensions: .xml .config .xsd
 <!-- SearchKit (https://github.com/hirov-anton/search-kit)
 See LICENSE file in the solution root for full license information
-Copyright (c) 2018 Anton Hirov -->
+Copyright (c) Anton Hirov -->
 
 extensions: .cshtml
 @* SearchKit (https://github.com/hirov-anton/search-kit)
 See LICENSE file in the solution root for full license information
-Copyright (c) 2018 Anton Hirov *@
+Copyright (c) Anton Hirov *@
 
 extensions: .js .css .scss
 /* SearchKit (https://github.com/hirov-anton/search-kit)
 See LICENSE file in the solution root for full license information
-Copyright (c) 2018 Anton Hirov */
+Copyright (c) Anton Hirov */

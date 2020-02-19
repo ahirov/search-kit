@@ -1,6 +1,6 @@
 ﻿@* SearchKit (https://github.com/hirov-anton/search-kit)
 See LICENSE file in the solution root for full license information
-Copyright (c) 2018 Anton Hirov *@
+Copyright (c) Anton Hirov *@
 
 @using SearchKit.Entities.View
 @model ColumnCollection
@@ -42,6 +42,7 @@ Copyright (c) 2018 Anton Hirov *@
                     <p class="sk-search-name">@item.Name:</p>
                 }
                 <div class="sk-hr"></div>
+                <div id="sk-search-@item.Id-container"></div> @* TODO extend for multiple columns!!! *@
             </div>
         }
     </div>

@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchKit.Tests", "SearchKi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchKit.Core", "SearchKit.Core\SearchKit.Core.csproj", "{F9683E20-5E26-4103-B642-757FFD86E424}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchKit.Data", "SearchKit.Data\SearchKit.Data.csproj", "{0DCCAFBC-6B6D-49EE-8B4D-075579F258D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchKit.Service", "SearchKit.Service\SearchKit.Service.csproj", "{F309A2AE-4A66-46F1-80E2-811DAB8EC11E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{F9683E20-5E26-4103-B642-757FFD86E424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9683E20-5E26-4103-B642-757FFD86E424}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9683E20-5E26-4103-B642-757FFD86E424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCCAFBC-6B6D-49EE-8B4D-075579F258D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCCAFBC-6B6D-49EE-8B4D-075579F258D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCCAFBC-6B6D-49EE-8B4D-075579F258D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCCAFBC-6B6D-49EE-8B4D-075579F258D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F309A2AE-4A66-46F1-80E2-811DAB8EC11E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F309A2AE-4A66-46F1-80E2-811DAB8EC11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F309A2AE-4A66-46F1-80E2-811DAB8EC11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F309A2AE-4A66-46F1-80E2-811DAB8EC11E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

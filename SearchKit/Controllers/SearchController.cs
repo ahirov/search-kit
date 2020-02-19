@@ -1,10 +1,11 @@
 ﻿// SearchKit (https://github.com/hirov-anton/search-kit)
 // See LICENSE file in the solution root for full license information
-// Copyright (c) 2018 Anton Hirov
+// Copyright (c) Anton Hirov
 
 using System.Web.Mvc;
 using Newtonsoft.Json;
-using SearchKit.Entities.Seed;
+using SearchKit.Converters;
+using SearchKit.Service;
 
 namespace SearchKit.Controllers
 {
@@ -20,12 +21,13 @@ namespace SearchKit.Controllers
         // POST: /Search/GetData
         public ActionResult GetData()
         {
-            var initializer = new DataInitializer();
-            var data = initializer.Init();
+            var loader = new SectionLoader();
+            var section = loader.Load();
 
-            return Json(new
+            var model = new SectionModelConverter().Convert(section);
+            return Json(new 
             {
-                data = JsonConvert.SerializeObject(data, GetJsonSettings())
+                data = JsonConvert.SerializeObject(model, GetJsonSettings())
             });
         }
 
