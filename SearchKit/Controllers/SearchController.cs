@@ -18,8 +18,8 @@ namespace SearchKit.Controllers
         }
 
         //
-        // POST: /Search/GetData
-        public ActionResult GetData()
+        // POST: /Search/GetInitData
+        public ActionResult GetInitData()
         {
             var loader = new SectionLoader();
             var section = loader.Load();
@@ -29,6 +29,13 @@ namespace SearchKit.Controllers
             {
                 data = JsonConvert.SerializeObject(model, GetJsonSettings())
             });
+        }
+
+        //
+        // POST: /Search/GetSectionData
+        public ActionResult GetSectionData(int sectionId)
+        {
+            return new EmptyResult();
         }
 
         private static JsonSerializerSettings GetJsonSettings()

@@ -4,7 +4,7 @@ Copyright (c) Anton Hirov */
 
 input.form-control {
     /* border */
-    border-color: #212529;
+    border-color: #343a40;
 }
 
 input.form-control:focus {
@@ -12,12 +12,12 @@ input.form-control:focus {
     box-shadow: none;
 
     /* border */
-    border-color: #212529;
+    border-color: #343a40;
 }
 
 .input-group-text {
     /* color */
-    color: #212529;
-    border-color: #212529;
+    color: #343a40;
+    border-color: #343a40;
     background-color: transparent;
 }

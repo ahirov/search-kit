@@ -61,23 +61,23 @@ namespace SearchKit
 
             var columnsScheme = new Dictionary<ColumnType, List<ColumnType>>
             {
-                {ColumnType.None,                new List<ColumnType> {ColumnType.InitialSection}},
                 {ColumnType.InitialSection,      new List<ColumnType> {ColumnType.IntermediateSection,
                                                                        ColumnType.FinalSection}},
                 {ColumnType.IntermediateSection, new List<ColumnType> {ColumnType.IntermediateSection,
                                                                        ColumnType.FinalSection}},
-                {ColumnType.FinalSection,        new List<ColumnType> {ColumnType.Items}}
+                {ColumnType.FinalSection,        new List<ColumnType> {ColumnType.Items}},
+                {ColumnType.Items,               new List<ColumnType>()}
             };
 
-            var lastType = ColumnType.None;
+            var nextTypes = new List<ColumnType> {ColumnType.InitialSection};
             foreach (var column in columns)
             {
-                if (!columnsScheme.ContainsKey(lastType)
-                  || columnsScheme[lastType].All(_ => _ != column.Type))
-                {
+                var columnType = column.Type;
+                if (columnsScheme.ContainsKey(columnType)
+                 && nextTypes.Any(_ => _ == columnType))
+                    nextTypes = columnsScheme[columnType];
+                else
                     throw new InvalidOperationException("Invalid columns order!");
-                }
-                lastType = column.Type;
             }
         }
     }

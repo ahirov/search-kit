@@ -111,6 +111,7 @@
     <Content Include="Global.asax" />
     <Content Include="Graphics\1.0\hr-block.svg" />
     <Content Include="Scripts\global\global-constants.js" />
+    <Content Include="Scripts\search\events\search-click-events.js" />
     <Content Include="Scripts\search\events\search-onload-events.js" />
     <Content Include="Scripts\dependencies\bootstrap-4.1.1\bootstrap.js" />
     <Content Include="Scripts\dependencies\bootstrap-4.1.1\bootstrap.min.js" />
@@ -134,7 +135,6 @@
     <Content Include="Styles\dependencies\bootstrap-select-1.13.1\bootstrap-select.min.css" />
     <Content Include="Styles\global\global.css" />
     <Content Include="Styles\global\input.css" />
-    <Content Include="Styles\search\search.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -177,7 +177,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Styles\search\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SearchKit.Core\SearchKit.Core.csproj">
       <Project>{F9683E20-5E26-4103-B642-757FFD86E424}</Project>

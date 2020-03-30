@@ -10,15 +10,28 @@ Copyright (c) Anton Hirov *@
 
 <div id="sk-search" class="sk-content">
     <div class="row">
-        <div class="offset-md-3 col-md-6">
-            <div class="sk-search-panel">
-                <div class="input-group">
+        <div class="offset-md-3 col-md-6 d-flex">
+            <div class="sk-search-panel my-3 flex-grow-1">
+                <div class="input-group input-group-sm">
                     <input type="text" class="form-control" />
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <i class="fas fa-search fa-sm"></i>
+                            <i class="fas fa-search fa-xs"></i>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="sk-search-panel my-3">
+                <div class="mt-1">
+                    <a href="#" class="d-inline-block ml-2">
+                        <i class="fas fa-font fa-xs"></i>
+                    </a>
+                    <a href="#" class="d-inline-block ml-2">
+                        <i class="fas fa-calendar-alt fa-xs"></i>
+                    </a>
+                    <a href="#" class="d-inline-block ml-2">
+                        <i class="fas fa-star-half-alt fa-xs"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -26,7 +39,7 @@ Copyright (c) Anton Hirov *@
     <div class="row">
         @foreach (var item in Model)
         {
-            <div class="col-md-@item.Width">
+            <div class="col-lg-@item.Width">
                 @if (item.Type == ColumnType.InitialSection)
                 {
                     <div class="d-flex">
@@ -34,28 +47,54 @@ Copyright (c) Anton Hirov *@
                             <i class="fas fa-external-link-alt fa-xs"
                                data-fa-transform="flip-h"></i>
                         </a>
-                        <p class="sk-search-name">@item.Name:</p>
+                        <p class="sk-search-name font-weight-bold text-dark mt-1"
+                           style="font-size: 14px;">@item.Name:</p>
                     </div>
                 }
                 else
                 {
-                    <p class="sk-search-name">@item.Name:</p>
+                    <p class="sk-search-name font-weight-bold text-right text-dark mt-1"
+                       style="font-size: 14px;">@item.Name:</p>
                 }
                 <div class="sk-hr"></div>
-                <div id="sk-search-@item.Id-container"></div> @* TODO extend for multiple columns!!! *@
+                <div>
+                    <a href="#" class="d-inline-block mr-2">
+                        <i class="fas fa-sort-alpha-down fa-xs"></i>
+                    </a>
+                    <a href="#" class="d-inline-block mr-2">
+                        <i class="fas fa-sort-amount-down fa-xs"></i>
+                    </a>
+                    <a href="#" class="d-inline-block mr-2">
+                        <i class="fas fa-sort-numeric-down fa-xs"></i>
+                    </a>
+                    @if (item.Type != ColumnType.Items)
+                    {
+                        <a href="#" class="d-inline-block mr-2">
+                            <i class="fas fa-sitemap fa-xs"></i>
+                        </a>
+                    }
+                </div>
+                <div id="sk-search-@item.Id-container" class="mt-2"></div> @* TODO extend for multiple columns!!! *@
+                <div class="d-flex justify-content-center mt-3">
+                    <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-light"><i class="fas fa-step-backward fa-xs"></i></button>
+                        <button type="button" class="btn btn-light"><i class="fas fa-backward fa-xs"></i></button>
+                        <button type="button" class="btn btn-light">10</button>
+                        <button type="button" class="btn btn-dark">11</button>
+                        <button type="button" class="btn btn-light">12</button>
+                        <button type="button" class="btn btn-light"><i class="fas fa-forward fa-xs"></i></button>
+                        <button type="button" class="btn btn-light"><i class="fas fa-step-forward fa-xs"></i></button>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center my-2">
+                    <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-light">10</button>
+                        <button type="button" class="btn btn-dark">20</button>
+                        <button type="button" class="btn btn-light">50</button>
+                        <button type="button" class="btn btn-light">100</button>
+                    </div>
+                </div>
             </div>
         }
     </div>
 </div>
-
-<i class="fas fa-sort-alpha-down fa-xs"></i>
-<i class="fas fa-sort-alpha-up fa-xs"></i>
-<i class="fas fa-sort-amount-down fa-xs"></i>
-<i class="fas fa-sort-amount-up fa-xs"></i>
-<i class="fas fa-sort-numeric-down fa-xs"></i>
-<i class="fas fa-sort-numeric-up fa-xs"></i>
-<i class="fas fa-sitemap fa-xs"></i>
-<br/>
-<i class="fas fa-font fa-xs"></i>
-<i class="fas fa-calendar-alt fa-xs"></i>
-<i class="fas fa-star-half-alt fa-xs"></i>

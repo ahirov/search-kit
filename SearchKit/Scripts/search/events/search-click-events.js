@@ -2,17 +2,17 @@
 See LICENSE file in the solution root for full license information
 Copyright (c) Anton Hirov */
 
-$(document).ready(function() {
+function clickSearchButton(e) {
     $.ajax({
         type: "POST",
-        url: getOriginUrl() + "/Search/GetInitData",
+        url: getOriginUrl() + "/Search/GetSectionData",
         headers: {
             //securityToken: TODO!!!
         },
+        data: { sectionId: $(e.target).data("id")},
         success: function (result) {
-            var rootSection = parseSections(result.data);
-            buildSections(rootSection);
+
         }
         //error: TODO!!!
     });
-});
+}

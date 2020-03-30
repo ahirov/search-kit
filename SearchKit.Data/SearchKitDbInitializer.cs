@@ -42,6 +42,14 @@ namespace SearchKit.Data
                 Name = "Section3",
                 Parent = rootSection
             });
+            for (var index = 4; index < 25; index++)
+            {
+                children.Add(new SectionData
+                {
+                    Name = "Section" + index,
+                    Parent = rootSection
+                });
+            }
             context.SectionDataSet.Add(rootSection);
             base.Seed(context);
         }

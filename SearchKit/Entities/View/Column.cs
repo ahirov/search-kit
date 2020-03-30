@@ -8,11 +8,10 @@ namespace SearchKit.Entities.View
 {
     public enum ColumnType
     {
-        None = 0,
-        InitialSection = 1,
+        InitialSection      = 1,
         IntermediateSection = 2,
-        FinalSection = 3,
-        Items = 4
+        FinalSection        = 3,
+        Items               = 4
     }
 
     public class Column
