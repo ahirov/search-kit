@@ -8,14 +8,27 @@ using SearchKit.Service.Entities;
 
 namespace SearchKit.Service
 {
-    public class SectionLoader
+    public interface ISectionLoader
     {
+        Section Load();
+    }
+
+    public class SectionLoader : ISectionLoader
+    {
+        private readonly IDataProvider dataProvider;
+        private readonly ISectionConverter sectionConverter;
+
+        public SectionLoader(IDataProvider dataProvider,
+                             ISectionConverter sectionConverter)
+        {
+            this.dataProvider = dataProvider;
+            this.sectionConverter = sectionConverter;
+        }
+
         public Section Load()
         {
-            var initializer = new SearchKitDbProcessor();
-            var data = initializer.Get();
-
-            return new SectionConverter().Convert(data);
+            var data = dataProvider.GetSection();
+            return sectionConverter.Convert(data);
         }
     }
 }

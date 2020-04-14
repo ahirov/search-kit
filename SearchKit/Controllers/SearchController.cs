@@ -11,6 +11,16 @@ namespace SearchKit.Controllers
 {
     public class SearchController : Controller
     {
+        private readonly ISectionLoader sectionLoader;
+        private readonly ISectionModelConverter sectionConverter;
+
+        public SearchController(ISectionLoader sectionLoader,
+                                ISectionModelConverter sectionConverter)
+        {
+            this.sectionLoader = sectionLoader;
+            this.sectionConverter = sectionConverter;
+        }
+
         // GET: /Search
         public ActionResult Index()
         {
@@ -21,10 +31,8 @@ namespace SearchKit.Controllers
         // POST: /Search/GetInitData
         public ActionResult GetInitData()
         {
-            var loader = new SectionLoader();
-            var section = loader.Load();
-
-            var model = new SectionModelConverter().Convert(section);
+            var section = sectionLoader.Load();
+            var model = sectionConverter.Convert(section);
             return Json(new 
             {
                 data = JsonConvert.SerializeObject(model, GetJsonSettings())

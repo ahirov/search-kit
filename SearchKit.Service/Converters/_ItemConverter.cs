@@ -7,7 +7,12 @@ using SearchKit.Service.Entities;
 
 namespace SearchKit.Service.Converters
 {
-    public class ItemConverter
+    public interface IItemConverter
+    {
+        Item Convert(ItemData data);
+    }
+
+    internal class ItemConverter : IItemConverter
     {
         public Item Convert(ItemData data)
         {

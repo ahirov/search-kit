@@ -8,8 +8,20 @@ using SearchKit.Service.Entities;
 
 namespace SearchKit.Converters
 {
-    public class SectionModelConverter
+    public interface ISectionModelConverter
     {
+        SectionModel Convert(Section section);
+    }
+
+    internal class SectionModelConverter : ISectionModelConverter
+    {
+        private readonly IItemModelConverter itemConverter;
+
+        public SectionModelConverter(IItemModelConverter itemConverter)
+        {
+            this.itemConverter = itemConverter;
+        }
+
         public SectionModel Convert(Section section)
         {
             var model = new SectionModel
@@ -17,7 +29,7 @@ namespace SearchKit.Converters
                 Id   = section.Id.ToString(),
                 Name = section.Name
             };
-            model.Items.AddRange(section.Items.Select(new ItemModelConverter().Convert));
+            model.Items.AddRange(section.Items.Select(itemConverter.Convert));
             model.Children.AddRange(section.Children.Select(Convert));
             model.Children.ForEach(_ => _.Parent = model);
             return model;

@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using SearchKit.IoC;
 
 namespace SearchKit
 {
@@ -13,7 +14,9 @@ namespace SearchKit
     {
         protected void Application_Start()
         {
+            SearchKitModule.Register();
             AreaRegistration.RegisterAllAreas();
+
             RouteConfig.Register(RouteTable.Routes);
             BundleConfig.Register(BundleTable.Bundles);
             ViewConfig.Register(ColumnTable.Columns);

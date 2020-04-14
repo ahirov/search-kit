@@ -3,10 +3,16 @@
 // Copyright (c) Anton Hirov
 
 using System.Data.Entity;
+using SearchKit.Data.Entities;
 
-namespace SearchKit.Data.Entities
+namespace SearchKit.Data
 {
-    public class SearchKitDbContext : DbContext
+    public interface ISearchKitDbContext
+    {
+        DbSet<SectionData> SectionDataSet { get; set; }
+    }
+
+    public class SearchKitDbContext : DbContext, ISearchKitDbContext
     {
         public SearchKitDbContext() : base("SearchKitDbConnection")
         {
